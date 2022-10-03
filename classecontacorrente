@@ -1,0 +1,18 @@
+class contacorrente:
+    def __init__(self, cliente, numero, saldo, deposito):
+        self.numero = str(numero)
+        self.saldo = saldo
+        self.cliente = cliente
+        self.deposito = deposito 
+
+    def saque(self, valor):
+        if valor < (self.saldo + self.limite):
+            self.saldo -= valor
+            return valor
+        else:
+            print 'Saldo insuficiente'
+
+     def deposito(self,valor_deposito):
+             self.saldo += valor_deposito
+             return self.saldo
+        
